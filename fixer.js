@@ -5,11 +5,16 @@ if (remote.getGlobal('args').length > 1) {
   let file = remote.getGlobal('args')[1];
   console.log(file);
   fs.readFile(file, (err, data) => {
-    console.log(data);
-    window.sessionStorage.setItem("file", data);
-    fs.writeFile(`${file.slice(0, -4)}-fixed.svg`, convert("file"), (err) => {
-      alert(err);
-    });
+    if (err) {
+      console.log(err);
+    } else {
+      window.sessionStorage.setItem("file", data);
+      fs.writeFile(`${file.slice(0, -4)}-fixed.svg`, convert("file"), (err) => {
+        if (err) {
+          alert(err);
+        }
+      });
+    }
   })
 }
 
@@ -169,8 +174,8 @@ regedit.list(['HKCR\\SystemFileAssociations\\.svg\\shell'], function(err, result
           }, function(error, stdout, stderr) {
             if (error) throw error;
             document.getElementById("explorerIntegration").innerText = "Disable Explorer integration";
-            remote.app.relaunch()
-            remote.app.exit()
+            remote.app.relaunch();
+            remote.app.exit();
           });
         })
       })
@@ -184,8 +189,8 @@ regedit.list(['HKCR\\SystemFileAssociations\\.svg\\shell'], function(err, result
         }, function(error, stdout, stderr) {
           if (error) throw error;
           document.getElementById("explorerIntegration").innerText = "Enable Explorer integration";
-          remote.app.relaunch()
-          remote.app.exit()
+          remote.app.relaunch();
+          remote.app.exit();
         });
       })
     })
