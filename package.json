@@ -1,6 +1,6 @@
 {
   "name": "sif-windows",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Electron-based Scratch Import Fixer app for Windows",
   "main": "main.js",
   "scripts": {
@@ -47,22 +47,8 @@
             "shortcutFolderName": "Scratch Import Fixer",
             "manufacturer": "Micah Lindley",
             "appIconPath": "./assets/icons/64x64.ico",
-            "version": "1.0.2"
+            "version": "1.0.3"
           }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
         }
       ]
     }
