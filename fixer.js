@@ -13,7 +13,7 @@ if (remote.getGlobal('args').length > 1) {
         if (err) {
           alert(err);
         }
-        app.quit();
+        remote.app.quit();
       });
     }
   })
