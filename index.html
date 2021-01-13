@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scratch Import Fixer</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="css/fluent.css">
+</head>
+
+<body id="upload">
+  <header id="titlebar">
+    <div id="drag-region">
+      <div id="window-title">
+        <span id="appTitle">Scratch Import Fixer</span>
+      </div>
+      <div id="window-controls">
+        <div class="button" id="min-button">
+          <span>&#xE921;</span>
+        </div>
+        <div class="button" id="close-button">
+          <span>&#xE8BB;</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="gridcol-1 acrylic medium">
+      <div class="flex">
+        <img src="assets/info.svg" class="icon-white" alt="About">
+        <h2>About</h2>
+      </div>
+      <p>SIF is designed to prepare SVG files created in Affinity Designer for upload to Scratch. This native version (1.0.0) is powered by Electron and was created by Micah Lindley. <br><br>This project was made possible by <a target="_blank"
+          href="https://scratch.mit.edu/users/ampara">ampara</a>
+        and <a target="
+      " href="https://scratch.mit.edu/users/Mazmythic">Mazmythic</a> - many thanks!</p>
+    </div>
+    <div class="gridcol-2">
+      <a class="button reveal" href="#" id="fakeButton">Select a file</a><br>
+      <a class="button reveal" href="#" id="explorerIntegration">Enable Explorer integration</a>
+    </div>
+    <input type="file" id="fileUpload" accept="image/svg+xml" multiple />
+  </main>
+  <script src="fluent.js" charset="utf-8"></script>
+  <script src="window.js" charset="utf-8"></script>
+  <script src="fixer.js" charset="utf-8"></script>
+</body>
+
+</html>
